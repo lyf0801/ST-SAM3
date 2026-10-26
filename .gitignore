@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+weights/*
+!weights/.gitkeep
+data/**/best.pth
+data/**/pseudo_labels/
+data/**/pseudo_labels_comparison/

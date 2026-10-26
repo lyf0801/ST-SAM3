@@ -1,0 +1,8 @@
+data:
+  dataset: whu_cd
+  data_root: ./dataset/WHU-CD
+  labeled_ratio: 0.05
+
+output:
+  save_dir: ./outputs/whu_cd
+  log_dir:  ./logs/whu_cd

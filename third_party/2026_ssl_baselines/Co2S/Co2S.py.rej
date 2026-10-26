@@ -1,0 +1,30 @@
+--- third_party/2026_ssl_baselines/Co2S/Co2S.py
++++ third_party/2026_ssl_baselines/Co2S/Co2S.py
+@@ -88,3 +88,27 @@
+ 
+     return diff2.sum() / denom
+ 
++
++def capture_rng_state():
++    return {
++        'python': random.getstate(),
++        'numpy': np.random.get_state(),
++        'torch': torch.get_rng_state(),
++        'cuda': torch.cuda.get_rng_state_all(),
++    }
++
++
++def restore_rng_state(state):
++    if not state:
++        return
++    random.setstate(state['python'])
++    np.random.set_state(state['numpy'])
++    torch.set_rng_state(state['torch'])
++    if torch.cuda.is_available() and state.get('cuda'):
++        torch.cuda.set_rng_state_all(state['cuda'])
++
++
++def atomic_torch_save(payload, path):
++    temporary = path + '.tmp'
++    torch.save(payload, temporary)
++    os.replace(temporary, path)

@@ -1,0 +1,52 @@
+data:
+  dataset: custom
+  data_root: ./dataset
+  img_size: 256
+  labeled_ratio: 0.05
+  num_workers: 4
+  in_channels: 3
+  mean: [0.485, 0.456, 0.406]
+  std:  [0.229, 0.224, 0.225]
+
+model:
+  backbone: resnet50
+  pretrained: true
+  num_classes: 2
+
+train:
+  epochs: 100
+  warmup_epochs: 30
+  batch_size: 8
+  lr: 0.01
+  lr_min: 1.0e-4
+  momentum: 0.9
+  weight_decay: 1.0e-4
+  ema_momentum: 0.999
+
+uapa:
+  window_size: 16
+  beta: 0.3
+  paste_ratio_max: 0.5
+  paste_ratio_min: 0.1
+
+drcl:
+  num_anchors: 32
+  num_samples: 64
+  temperature: 0.1
+  memory_bank_size: 512
+  global_loss_weight: 0.5
+  contrast_loss_weight: 0.1
+
+uglr:
+  gamma_labeled: 2.0
+  gamma_unlabeled: -1.0
+
+pseudo_label:
+  confidence_threshold: 0.9
+
+output:
+  save_dir: ./outputs
+  log_dir:  ./logs
+  save_interval: 10
+  eval_interval: 5
+  visualize: true

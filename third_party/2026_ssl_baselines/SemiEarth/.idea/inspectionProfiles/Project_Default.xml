@@ -1,0 +1,31 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="18">
+            <item index="0" class="java.lang.String" itemvalue="pyarrow" />
+            <item index="1" class="java.lang.String" itemvalue="vllm" />
+            <item index="2" class="java.lang.String" itemvalue="transformers" />
+            <item index="3" class="java.lang.String" itemvalue="sam2" />
+            <item index="4" class="java.lang.String" itemvalue="datasets" />
+            <item index="5" class="java.lang.String" itemvalue="ray" />
+            <item index="6" class="java.lang.String" itemvalue="ipykernel" />
+            <item index="7" class="java.lang.String" itemvalue="omegaconf" />
+            <item index="8" class="java.lang.String" itemvalue="qwen-vl-utils" />
+            <item index="9" class="java.lang.String" itemvalue="mathruler" />
+            <item index="10" class="java.lang.String" itemvalue="liger-kernel" />
+            <item index="11" class="java.lang.String" itemvalue="peft" />
+            <item index="12" class="java.lang.String" itemvalue="wandb" />
+            <item index="13" class="java.lang.String" itemvalue="accelerate" />
+            <item index="14" class="java.lang.String" itemvalue="tensordict" />
+            <item index="15" class="java.lang.String" itemvalue="codetiming" />
+            <item index="16" class="java.lang.String" itemvalue="pycocotools" />
+            <item index="17" class="java.lang.String" itemvalue="pylatexenc" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
