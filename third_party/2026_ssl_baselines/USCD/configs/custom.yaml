@@ -1,0 +1,25 @@
+# 修改 data_root 和 labeled_ratio 即可开始训练
+#
+# 数据目录结构:
+#   data_root/
+#     train/  A/  B/  label/
+#     val/    A/  B/  label/
+#     test/   A/  B/  label/
+#
+# label 为二值掩码，0=未变化，255=变化
+
+data:
+  dataset: custom
+  data_root: ./my_dataset
+  data_format: folder      # folder | filelist
+  labeled_ratio: 0.10
+  img_size: 256
+  in_channels: 3
+
+train:
+  batch_size: 4
+  epochs: 100
+
+output:
+  save_dir: ./outputs/custom
+  log_dir:  ./logs/custom

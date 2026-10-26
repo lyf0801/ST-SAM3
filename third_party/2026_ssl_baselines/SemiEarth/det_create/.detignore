@@ -1,0 +1,23 @@
+# 大文件目录
+pretrained/
+training-logs/
+dataset/
+LoveDA/
+Potsdam/
+
+# Python 缓存
+__pycache__/
+*.pyc
+__pycache__
+
+# Git
+.git/
+.gitignore
+
+# 检查点
+*.pth
+*.pt
+*.ckpt
+
+# 日志
+*.log

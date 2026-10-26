@@ -1,0 +1,26 @@
+name: semiearth
+description: semiearth
+workspace: workspace
+project: semiearth
+resources:
+  resource_pool: 4090_device
+  slots_per_trial: 8
+  max_slots: 8
+bind_mounts:
+  - host_path: /home/fds-admin/determinedai_files
+    container_path: /home/fds-admin/determinedai_files
+  - host_path: /home/fds-admin/user_files
+    container_path: /home/fds-admin/user_files
+environment:
+  force_pull_image: true
+  image: /semiearth/semiearth:latest
+  registry_auth:
+    username: username
+    password: password
+    serveraddress: serveraddress
+searcher:
+  name: single
+  metric: accuracy
+entrypoint:
+    sh scripts/train_love_1_100.sh 8 29501 29502 29503 29504 29505 29506 29507 29508
+

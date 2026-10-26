@@ -1,0 +1,8 @@
+data:
+  dataset: levir_cd
+  data_root: ./dataset/LEVIR-CD
+  labeled_ratio: 0.05
+
+output:
+  save_dir: ./outputs/levir_cd
+  log_dir:  ./logs/levir_cd

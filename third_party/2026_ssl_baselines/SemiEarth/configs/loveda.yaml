@@ -1,0 +1,26 @@
+# arguments for dataset
+dataset: loveda
+nclass: 8
+crop_size: 518
+data_root: LoveDA
+
+# arguments for training
+epochs: 20
+batch_size: 4 # per GPU x 4 GPUs
+lr: 0.000005
+lr_multi: 40.0
+criterion:
+  name: CELoss
+  kwargs:
+    ignore_index: 255
+conf_thresh: 0.95
+
+# arguments for model
+model: dpt
+backbone: dinov2_small
+lock_backbone: False
+
+use_vlm_pp: true
+vlm_type: qwen_vl
+vlm_pp_conf_threshold: 0.7
+use_vlm_on_mismatch: true

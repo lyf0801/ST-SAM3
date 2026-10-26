@@ -1,0 +1,16 @@
+LoveDA/
+Potsdam/
+pretrained/
+training-logs/
+exp/
+__pycache__/
+semienv/
+*.pyc
+*.pth
+*.pt
+*.ckpt
+*.png
+*.jpg
+.git/
+docs/
+det_create/
